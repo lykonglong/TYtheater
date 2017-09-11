@@ -33,21 +33,10 @@
 
 
                                 <li>
-                                    <?php
-//                                    function categories_C($count){
-//                                        global $connection;
-//                                        $query = "SELECT FROM movies WHERE movie_cate_id =$count";
-//                                        $query_count = mysqli_query($connection,$query);
-//                                        $nn=mysqli_num_rows($query_count);
-//
-//
-//                                        return $nn;
-                                    //}
 
-                                    ?>
                                     <a href="categories.html" class="is-active">
                                         <span><?php echo $cate_name; ?></span>
-                                        <span class="categories-menu__badge"></span>
+                                        <span class="categories-menu__badge"><?php categories_C(3);  ?></span>
                                     </a>
                                 </li>
                                 <?php } ?>
