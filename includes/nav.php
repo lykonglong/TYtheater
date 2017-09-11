@@ -1,0 +1,256 @@
+
+<body class="page">
+<div class="page__layout">
+
+    <div class="overlay"></div>
+    <!--HEADER-->
+    <header class="page__header header">
+        <div class="container">
+            <div class="header__left">
+                <a href="#" class="logo js-ajax-link">
+                    <img src="images/logo.svg" alt="">
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item header__nav-item--dropdown">
+                            <a href="index-2.html" class="header__nav-link js-ajax-link mobile-ajax-off">
+                                Home
+                            </a>
+
+                        </li>
+                        <li class="header__nav-item header__nav-item--dropdown">
+                            <a href="categories.html" class="header__nav-link js-ajax-link mobile-ajax-off">
+                                Categories
+                            </a>
+                            <div class="header__nav-dropdown header__nav-dropdown--categories">
+                                <ul>
+
+                                    <?php
+                                    $query = "SELECT * FROM categories";
+                                    $select_all_category_query = mysqli_query($connection,$query);
+                                    $nrow=0;
+                                    $num_row = mysqli_num_rows($select_all_category_query);
+                                    while ($row=mysqli_fetch_assoc($select_all_category_query)){
+                                    $cate_id = $row['cate_id'];
+                                    $cate_name = $row['cate_name'];
+                                    ?>
+
+                                    <li>
+                                        <a href="categories.html" class="js-ajax-link">
+                                            <?php echo $cate_name; ?>
+                                        </a>
+                                    </li>
+                                    <?php
+
+                                        if ($nrow ==4 or $nrow==9 or $nrow==14 or $nrow==19 or $nrow==24){
+                                           echo" </ul>";
+                                            echo" <ul>";
+
+                                       // $nrow==$num_row;
+
+
+                                    } $nrow++;
+                                    } ?>
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Adventure-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Animation-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Biography-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Comedy-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Crime-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Documentary-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Drama-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Family-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                                <ul>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Fantasy-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Film-Noir-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            History-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Horror-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Music-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Musical-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Mystery-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Romance-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Sci-Fi-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                                <ul>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Sci-Fi-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Sport-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Game-Show-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            History-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Horror-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Musical-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Mystery-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            Romance-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <a href="categories.html" class="js-ajax-link">-->
+<!--                                            News-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__nav-item header__nav-item--dropdown">
+                            <a href="categories.html" class="header__nav-link js-ajax-link mobile-ajax-off">
+                                About Us
+                            </a>
+
+                        </li>
+                        <li class="header__nav-item header__nav-item--dropdown">
+                            <a href="categories.html" class="header__nav-link js-ajax-link mobile-ajax-off">
+                                Contact Us
+                            </a>
+
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__right">
+
+                <a href="#" class="search-open"></a>
+                <a href="#" class="search-close"></a>
+            </div>
+            <!-- search form -->
+            <form action="#" method="post" class="search">
+                <input type="text" name="search" class="search__field" placeholder="Search ....." autocomplete="off">
+                <button class="search__button" type="submit"></button>
+                <div class="search__enter">
+                    Enter
+                </div>
+                <div class="search__quick-links">
+                    <h6>Quick Links</h6>
+                    <ul>
+                        <li>
+                            <a href="#">Unlocking The Bible Codes</a>
+                        </li>
+                        <li>
+                            <a href="#">Mel Gibson movies</a>
+                        </li>
+                        <li>
+                            <a href="#">The Emerald Buddha</a>
+                        </li>
+                        <li>
+                            <a href="#">A Brief History Of Creation</a>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+            <!-- /search form -->
+            <a href="#" class="menu-open">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <a href="#" class="menu-close">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-menu__scroll-content">
+
+            </div>
+        </div>
+    </header>
+    <!--/HEADER-->
+    <div id="content-ajax">
