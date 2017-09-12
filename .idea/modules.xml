@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/tytheater.iml" filepath="$PROJECT_DIR$/.idea/tytheater.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TYtheater.iml" filepath="$PROJECT_DIR$/.idea/TYtheater.iml" />
     </modules>
   </component>
 </project>
