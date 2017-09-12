@@ -36,7 +36,7 @@
 
                                     <a href="categories.html" class="is-active">
                                         <span><?php echo $cate_name; ?></span>
-                                        <span class="categories-menu__badge"><?php categories_C(3);  ?></span>
+                                        <span class="categories-menu__badge"><?php categories_C($cate_id);  ?></span>
                                     </a>
                                 </li>
                                 <?php } ?>
