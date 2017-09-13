@@ -23,7 +23,7 @@
 
                             <div class="bnr-container bnr-container--lg">
                                 <a href="#">
-                                    <span class="banner-image lazy-bg-img" data-original="images/banner_h.jpg"></span>
+                                    <span class="banner-image lazy-bg-img" data-original="images/watch.png"></span>
                                 </a>
                             </div>
 
