@@ -29,12 +29,13 @@
 
         </div>
         <?php } ?>
+        </div>
 
     </div>
 </div>
 <!--pagination-->
 <div class="page-controls">
-<!--    <a href="#" class="show-more">Show more</a>-->
+    <a href="#" class="show-more">Show more</a>
     <div class="pagination">
         <ul class="pagination__pages">
             <li>
