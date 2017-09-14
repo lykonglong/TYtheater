@@ -1,7 +1,7 @@
 <div class="col-xxl-10 col-md-9 col-sm-8">
     <div class="row five-columns row--flex">
         <?php
-        $query = "SELECT * FROM movies";
+        $query = "SELECT * FROM movies ORDER BY movie_id DESC ";
         $select_all_movies = mysqli_query($connection,$query);
 
         while ($row=mysqli_fetch_assoc($select_all_movies)){
@@ -13,7 +13,7 @@
         $movie_resolution = $row['movie_resolution'];
         ?>
         <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-            <a href="video.html" class="video-preview video-preview--sm js-ajax-link">
+            <a href="trailer.php?movie=<?php echo $movie_id; ?>" class="video-preview video-preview--sm js-ajax-link">
                 <div class="video-preview__image">
                     <span class="lazy-bg-img" data-original="movie/cover/<?php echo $movie_image; ?>"></span>
 <!--                    <img  class="lazy-bg-img" src="movie/cover/--><?php //echo $movie_image; ?><!--" >-->
