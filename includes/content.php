@@ -1,8 +1,10 @@
 
 <div class="col-xxl-10 col-md-9 col-sm-8">
     <div class="row five-columns row--flex">
-	 <?php
-        $query = "SELECT * FROM movies";
+
+        <?php
+        $query = "SELECT * FROM movies ORDER BY movie_id DESC ";
+
         $select_all_movies = mysqli_query($connection,$query);
 
         while ($row=mysqli_fetch_assoc($select_all_movies)){
@@ -14,21 +16,24 @@
         $movie_resolution = $row['movie_resolution'];
         ?>
         <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-			<a href="video.html" class="video-preview video-preview--sm js-ajax-link">
-					<div class="video-preview__image" >
-						<span class="lazy-bg-img" data-original="movie/cover/<?php echo $movie_image; ?>" ></span>
-	
-						<div class="video-preview__info">							
-							<div class="video-preview__quality"><?php echo $movie_resolution; ?></div>
-						</div>
-					</div>
-					<h4 class="video-preview__descr"><?php echo $movie_title ?></h4>
-			</a>
-        </div>  
-		<?php } ?>		
-		
-        </div>                        
-		</div>
+
+            <a href="trailer.php?movie=<?php echo $movie_id; ?>" class="video-preview video-preview--sm js-ajax-link">
+                <div class="video-preview__image">
+                    <span class="lazy-bg-img" data-original="movie/cover/<?php echo $movie_image; ?>"></span>
+<!--                    <img  class="lazy-bg-img" src="movie/cover/--><?php //echo $movie_image; ?><!--" >-->
+                    <div class="video-preview__info">
+                        <div class="video-preview__duration"><?php echo $movie_date; ?></div>
+                        <div class="video-preview__likes">88%</div>
+                        <div class="video-preview__quality"><?php echo $movie_resolution; ?></div>
+                    </div>
+                </div>
+                <h4 class="video-preview__descr"><?php echo $movie_title ?></h4>
+                <h5 class="video-preview__descr"><?php echo $movie_desc ?></h5>
+            </a>
+
+        </div>
+        <?php } ?>
+
 </div>
 </div>
 <!--pagination-->
