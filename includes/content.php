@@ -11,8 +11,6 @@
         $movie_id = $row['movie_id'];
         $movie_title = $row['movie_title'];
         $movie_image = $row['movie_image'];
-        $movie_desc = $row['movie_description'];
-        $movie_date = $row['date_added'];
         $movie_resolution = $row['movie_resolution'];
         ?>
         <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
@@ -24,12 +22,17 @@
                     <div class="video-preview__info">
 
 
+
+
                         <div class="video-preview__quality"><?php echo $movie_resolution; ?></div>
                     </div>
                 </div>
                 <h4 class="video-preview__descr"><?php echo $movie_title ?></h4>
 
+
                 </a>
+
+
 
         </div>
         <?php } ?>

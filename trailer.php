@@ -57,7 +57,9 @@
 <!--                        <div class="info__content">-->
 
 
+
                                     <video src="movie/trailer/<?php echo $movie_trailer; ?>" controls autoplay preload="auto"  width="100%" height="100%" controlsList="nodownload" id="myVideoFile">
+
 
 
                                     </video>
