@@ -28,7 +28,6 @@
                     </div>
                 </div>
                 <h4 class="video-preview__descr"><?php echo $movie_title ?></h4>
-<!--                <h5 class="video-preview__descr">--><?php //echo $movie_desc ?><!--</h5>-->
 
                 </a>
 
@@ -41,7 +40,7 @@
 </div>
 <!--pagination-->
 <div class="page-controls">
-    
+
     <div class="pagination">
         <ul class="pagination__pages">
             <li>
