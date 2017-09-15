@@ -30,6 +30,9 @@
 
     <!-- Revolution Slider CSS -->
     <link href="css/revolution-slider.css" rel="stylesheet">
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+
 
 
 
@@ -56,7 +59,7 @@
     <!--/CSS CRITICAL-->
 
     <!--CSS MAIN-->
-    <link rel="stylesheet" href="css/main.css">
+<!--    --><?php //include 'css/main.css'; ?>
     <!--/CSS MAIN-->
 
 </head>

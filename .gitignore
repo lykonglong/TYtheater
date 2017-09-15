@@ -5,3 +5,5 @@ movie
 .idea/
 /.idea/
 *.idea
+*.xml
+.idea/workspace.xml

@@ -2,6 +2,7 @@
 <?php  include "includes/header.php"; ?>
 <?php  include "includes/nav.php"; ?>
 
+
 <?php
 
     if(isset($_GET['movie'])){
@@ -44,7 +45,6 @@
     }
 ?>
 
-?>
 
     <main class="page__main main">
         <!--VIDEO-->
@@ -58,6 +58,7 @@
 
 
                                     <video src="movie/trailer/<?php echo $movie_trailer; ?>" controls autoplay preload="auto"  width="100%" height="100%" controlsList="nodownload" id="myVideoFile">
+
 
                                     </video>
 
@@ -165,8 +166,6 @@
                                 </div>
 
                             </div>
-
-<!--                             </div>-->
 
                     </div>
                 </div>

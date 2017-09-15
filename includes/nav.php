@@ -8,7 +8,7 @@
         <div class="container">
             <div class="header__left">
                 <a href="#" class="logo js-ajax-link">
-                    <img src="images/logo.svg" alt="">
+                    <img src="images/logo1.svg" alt="" width="95px" height="70px">
                 </a>
                 <nav class="header__nav">
                     <ul class="header__nav-list">
