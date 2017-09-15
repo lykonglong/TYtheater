@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/TYtheater.iml" filepath="$PROJECT_DIR$/.idea/TYtheater.iml" />
+      <module fileurl="file://C:\wamp\www\TYtheater\.idea\TYtheater.iml" filepath="C:\wamp\www\TYtheater\.idea\TYtheater.iml" />
     </modules>
   </component>
 </project>

@@ -7,3 +7,5 @@ movie
 *.idea
 *.xml
 .idea/workspace.xml
+.idea/modules.xml
+.idea/workspace.xml
