@@ -3,6 +3,49 @@
 <?php  include "includes/nav.php"; ?>
 
 
+<?php
+
+    if(isset($_GET['movie'])){
+        $movie_id=$_GET['movie'];
+        $pre_st=$connection->prepare("select * from movies where movie_id=?");
+        $pre_st->bind_param("s",$movie_id);
+        $pre_st->execute();
+        $select_movie=$pre_st->get_result();
+        //$row=$select_video->num_rows;
+        while($row= $select_movie->fetch_assoc()){
+            $movie_id=$row['movie_id'];
+            $user_id=$row['user_id'];
+            $movie_cate_id=$row['movie_cate_id'];
+            $movie_title=$row['movie_title'];
+            $movie_description = $row['movie_description'];
+            $movie_trailer=$row['movie_trailer'];
+            $movie_full=$row['movie_full'];
+            $date_added=$row['date_added'];
+            $movie_tags=$row['movie_tags'];
+            $movie_date=$row['movie_date'];
+            $movie_resolution=$row['movie_resolution'];
+
+
+            $select_user ="SELECT * FROM users WHERE user_id = $user_id";
+            $run_select_user =mysqli_query($connection,$select_user);
+            while($row_user=mysqli_fetch_assoc($run_select_user))
+            {
+                $username=$row_user['username'];
+                $fullname=$row_user['fullname'];
+            }
+
+            $select_cate ="SELECT * FROM categories WHERE cate_id = $movie_cate_id";
+            $run_select_cate =mysqli_query($connection,$select_cate);
+            while($row_cate=mysqli_fetch_assoc($run_select_cate))
+            {
+                $cate_name=$row_cate['cate_name'];
+            }
+        }
+
+    }
+?>
+
+
     <main class="page__main main">
         <!--VIDEO-->
         <div class="inner">
@@ -14,7 +57,10 @@
 <!--                        <div class="info__content">-->
 
 
-                                    <video src="movie/trailer/avengers2-720p.MP4" controls autoplay preload="auto"  width="100%" height="100%" controlsList="nodownload" id="myVideoFile">
+
+                                    <video src="movie/trailer/<?php echo $movie_trailer; ?>" controls autoplay preload="auto"  width="100%" height="100%" controlsList="nodownload" id="myVideoFile">
+
+
 
                                     </video>
 
@@ -56,30 +102,36 @@
                                     <div class="video-specs">
                                         <div class="video-specs__left">
                                             <p class="video-spec">
-                                                <span>Views:</span>
-                                                16 241
+                                                <span>Title:</span>
+                                                <?php echo $movie_title;?>
                                             </p>
                                             <p class="video-spec">
-                                                <span>Duration:</span>
-                                                3 min 30 sec
+                                                <span>Date Release: </span>
+                                                <?php echo $movie_date; ?>
                                             </p>
                                             <p class="video-spec">
                                                 <span>Added:</span>
-                                                5 years ago
+                                                <?php echo $date_added;?>
                                             </p>
                                         </div>
                                         <div class="video-specs__right">
                                             <p class="video-spec">
-                                                <span>Cast:</span>
-                                                <a href="actor-profile.html" class="js-ajax-link">Michael Jackson</a>
+                                                <span>Resolution: </span>
+                                                <a href="actor-profile.html" class="js-ajax-link"><?php echo $movie_resolution; ?></a href="actor-profile.html">
                                             </p>
                                             <p class="video-spec video-spec--category">
                                                 <span>Category:</span>
-                                                <a href="#" class="video-specs__category">GROOVE</a>
+                                                <a href="#" class="video-specs__category"><?php echo $cate_name; ?></a>
                                             </p>
                                             <p class="video-spec video-spec--tags">
                                                 <span>Tags:</span>
-                                                <a href="#" class="video-specs__tag">TAGNAME</a>
+                                                    <?php
+                                                    $tag_explode = explode(",",$movie_tags);
+                                                     foreach ($tag_explode as $item) {
+                                                         echo "<a href=\"#\" class=\"video-specs__tag\">$item</a>";
+                                                     }
+                                                    ?>
+
                                             </p>
                                         </div>
                                     </div>
@@ -87,14 +139,9 @@
 
                                 <div class="video-info__descr">
 
-                                    <h3>Recent trends and influences</h3>
+                                    <h3>Moive desciption</h3>
                                     <p>
-                                        Apparently we had reached a great height in the atmosphere, for the sky was a dead black,
-                                        and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the
-                                        sea to the level of the spectator on a hillside, the sable cloud beneath was dished out,
-                                        and the car seemed to float in the middle of an immense dark sphere, whose upper half was
-                                        strewn with silver. Looking down into the dark gulf below, I could see a ruddy light
-                                        streaming through a rift in the clouds.
+                                        <?php echo $movie_description; ?>
                                     </p>
 
                                     <div class="seo-spoiler">
@@ -121,8 +168,6 @@
                                 </div>
 
                             </div>
-              
-<!--                             </div>-->
 
                     </div>
                 </div>
