@@ -8,8 +8,6 @@
         $movie_id = $row['movie_id'];
         $movie_title = $row['movie_title'];
         $movie_image = $row['movie_image'];
-        $movie_desc = $row['movie_description'];
-        $movie_date = $row['date_added'];
         $movie_resolution = $row['movie_resolution'];
         ?>
         <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
@@ -18,13 +16,12 @@
                     <span class="lazy-bg-img" data-original="movie/cover/<?php echo $movie_image; ?>"></span>
 <!--                    <img  class="lazy-bg-img" src="movie/cover/--><?php //echo $movie_image; ?><!--" >-->
                     <div class="video-preview__info">
-                        <div class="video-preview__duration"><?php echo $movie_date; ?></div>
                         <div class="video-preview__likes">88%</div>
                         <div class="video-preview__quality"><?php echo $movie_resolution; ?></div>
                     </div>
                 </div>
                 <h4 class="video-preview__descr"><?php echo $movie_title ?></h4>
-                <h5 class="video-preview__descr"><?php echo $movie_desc ?></h5>
+<!--                <h5 class="video-preview__descr"><?php echo $movie_desc ?></h5>-->
             </a>
 
         </div>
