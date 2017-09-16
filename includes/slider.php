@@ -8,7 +8,7 @@
                         <!-- SLIDE 1 -->
                         <li data-transition="slidehorizontal" data-slotamount="5" data-masterspeed="700" >
                             <!-- MAIN IMAGE -->
-                            <img src="images/slider/slider-img1.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                            <img src="images/slider/movieall.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
                             <!-- LAYER NR. 1 -->
                             <div class="tp-caption very_big_white skewfromrightshort fadeout"
@@ -17,18 +17,18 @@
                                  data-speed="500"
                                  data-start="1200"
                                  data-easing="Circ.easeInOut"
-                                 style=" font-size:70px; font-weight:800; color:#fe0100;">Huge <span style=" color:#000;">sale</span> </div>
+                                 style=" font-size:70px; font-weight:800; color:#000;">FULL <span style=" color:#fe0100;">HD</span> </div>
 
                             <!-- LAYER NR. 2 -->
                             <div class="tp-caption tp-caption medium_text skewfromrightshort fadeout"
                                  data-x="center"
-                                 data-y="165"
+                                 data-y="185"
                                  data-hoffset="0"
                                  data-voffset="-73"
                                  data-speed="500"
                                  data-start="1200"
                                  data-easing="Power4.easeOut"
-                                 style=" font-size:20px; font-weight:500; color:#337ab7;"> Sale off 75% all products </div>
+                                 style=" font-size:20px; font-weight:500; color:#337ab7;"> All movie will show time </div>
 
                             <!-- LAYER NR. 3 -->
                             <div class="tp-caption customin tp-resizeme rs-parallaxlevel-0"
@@ -45,13 +45,13 @@
                                  data-elementdelay="0.1"
                                  data-endelementdelay="0.1"
                                  data-linktoslide="next"
-                                 style="border: 2px solid #fed700;border-radius: 50px; font-size:14px; background-color:#fed700; color:#333; z-index: 12; max-width: auto; max-height: auto; white-space: nowrap; letter-spacing:1px;"><a href='#' class='largebtn slide1'>Learn More</a> </div>
+                                 style="border: 2px solid #fed700;border-radius: 50px; font-size:14px; background-color:#fed700; color:#333; z-index: 12; max-width: auto; max-height: auto; white-space: nowrap; letter-spacing:1px;"><a href='#' class='largebtn slide1'>Watch Full Movie</a> </div>
                         </li>
 
                         <!-- SLIDE 2 -->
                         <li data-transition="slidehorizontal" data-slotamount="5" data-masterspeed="700" >
                             <!-- MAIN IMAGE -->
-                            <img src="images/slider/slider-img2.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                            <img src="images/slider/kong-skull-island.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
                             <!-- LAYER NR. 1 -->
                             <div class="tp-caption white_heavy_60 customin ltl tp-resizeme"
@@ -67,7 +67,7 @@
                                  data-endelementdelay="0.1"
                                  data-endspeed="1000"
                                  data-endeasing="Power4.easeIn"
-                                 style=" font-size:70px; font-weight:800; color:#333;">GREAT LOOKS </div>
+                                 style=" font-size:70px; font-weight:800; color: ;">3D MOVIE </div>
 
                             <!-- LAYER NR. 2 -->
                             <div class="tp-caption black_thin_blackbg_30 customin ltl tp-resizeme"
@@ -98,13 +98,13 @@
                                  data-elementdelay="0.01"
                                  data-endelementdelay="0.1"
                                  data-linktoslide="next"
-                                 style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='largebtn solid'>Get It Now!</a> </div>
+                                 style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='largebtn solid'>watch Full Movie</a> </div>
                         </li>
 
                         <!-- SLIDE 3 -->
                         <li data-transition="slidehorizontal" data-slotamount="5" data-masterspeed="700" >
                             <!-- MAIN IMAGE -->
-                            <img src="images/slider/slider-img3.jpg" alt="slidebg3" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                            <img src="images/slider/The-Great-Gatsby.jpg" alt="slidebg3" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
                             <!-- LAYER NR. 1 -->
                             <div class="tp-caption big_100_white lft start fadeout"
@@ -129,7 +129,7 @@
                                  data-speed="500"
                                  data-start="1200"
                                  data-easing="Power4.easeOut"
-                                 style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap; color:#34bcec; font-size:20px; font-weight:500;">Best Camera For You?</div>
+                                 style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap; color:#34bcec; font-size:20px; font-weight:500;">Coming Soon</div>
 
                             <!-- LAYER NR. 3 -->
                             <div class="tp-caption fade fadeout tp-resizeme"
@@ -145,7 +145,7 @@
                                  data-elementdelay="0.01"
                                  data-endelementdelay="0.1"
                                  data-linktoslide="next"
-                                 style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='largebtn solid'>Get It Now!</a> </div>
+                                 style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='largebtn solid'>Trailer</a> </div>
                         </li>
                     </ul>
                 </div>
