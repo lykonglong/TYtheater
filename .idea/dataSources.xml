@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="DataSourceManagerImpl" format="xml" hash="3685699611">
+=======
+  <component name="DataSourceManagerImpl" format="xml" hash="0">
+>>>>>>> 23424c3e390394a98da1c3e9548ae9971f89ef6c
     <data-source source="LOCAL" name="tycinema@localhost" uuid="1ff8d902-676c-43c4-912b-5e79d25efd72">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
