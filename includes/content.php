@@ -22,24 +22,18 @@
                     <div class="video-preview__info">
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 23424c3e390394a98da1c3e9548ae9971f89ef6c
                         <div class="video-preview__quality"><?php echo $movie_resolution; ?></div>
                     </div>
                 </div>
                 <h4 class="video-preview__descr"><?php echo $movie_title ?></h4>
 
-<<<<<<< HEAD
-                </a>
-=======
+
 
                 </a>
 
 
->>>>>>> 23424c3e390394a98da1c3e9548ae9971f89ef6c
 
         </div>
 
@@ -52,15 +46,7 @@
 </div>
 <!--pagination-->
 <div class="page-controls">
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <a href="#" class="show-more">Show more</a>
-=======
 
->>>>>>> 76826711194ac4560a452ea026d5db111ee9763e
-=======
-
->>>>>>> 23424c3e390394a98da1c3e9548ae9971f89ef6c
     <div class="pagination">
 
         <ul class="pagination__pages">
