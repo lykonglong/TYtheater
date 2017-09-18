@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<title>Slider Management</title>
 <?php
 session_start();
 //error_reporting(0);
@@ -80,7 +81,9 @@ if($user_role=='Admin')
 <script src="../plugins/input-mask/jquery.inputmask.extensions.js"></script>
 <script>
     $(function () {
-        $("#example1").DataTable();
+        $("#example1").DataTable({
+            "order": [[ 0, "DESC" ]]
+        });
         $('#example2').DataTable({
             "paging": true,
             "lengthChange": false,

@@ -88,8 +88,8 @@ if($user_id)
                                                     <input type="file" id="slider_image" name="slider_image" onchange="document.getElementById('s_image').src = window.URL.createObjectURL(this.files[0]);" required>
                                                     <p class="help-block col-sm-offset-2"> <span style="color: red;font-size: 14px;" ></span></p>
                                                 </div>
-                                                <div class="col-sm-4 col-sm-offset-4">
-                                                    <img id="s_image" alt="Preview" width="150" height="200"/>
+                                                <div class="col-sm-4">
+                                                    <img id="s_image" alt="Preview" width="530" height="200"/>
                                                 </div>
                                             </div>
 
@@ -130,7 +130,8 @@ if($user_id)
                     <table id="example1" class="table table-bordered table-hover">
                         <thead>
                         <tr>
-                            <th>ID</th>
+                            <th hidden>ID</th>
+                            <th>No</th>
                             <th>Title</th>
                             <th>Link</th>
                             <th>Image</th>
@@ -139,8 +140,10 @@ if($user_id)
                         </thead>
                         <tbody>
                         <?php
+
                         $query="select * from slider";
                         $select_slider=mysqli_query($connection,$query);
+                        $n = mysqli_num_rows($select_slider);
                         while($row = mysqli_fetch_assoc($select_slider)){
                             $slider_id = $row['slider_id'];
                             $slider_title = $row['slider_title'];
@@ -148,22 +151,25 @@ if($user_id)
                             $slider_image= $row['slider_image'];
                             ?>
                             <tr>
-                                <td style="line-height: 30px;font-size:;"><?php echo $slider_id ;?></td>
+                                <td hidden style="line-height: 30px;font-size:;"><?php echo $slider_id ;?></td>
+                                <td style="line-height: 30px;font-size:;"><?php echo $n ;?></td>
                                 <td style="line-height: 30px;font-size:;"><?php echo $slider_title;?></td>
                                 <td style="line-height: 30px;font-size:;"><?php echo $slider_link;?></td>
 
-                                <td style=""><img src="../dist/img/slider/<?php echo $slider_image;?>" class="img-responsive" alt="<?php echo $slider_image;?>" style="height: 30px;"></td>
+                                <td align="center" style=""><img src="../dist/img/slider/<?php echo $slider_image;?>" class="img-responsive" alt="<?php echo $slider_image;?>" style="height: 30px;"></td>
                                 <td align="center" style="line-height: 30px;font-size:;" >
                                     <a href="slide.php?action=edit_slide&slide_id=<?php echo $slider_id; ?>" class="btn btn-success btn-flat btn-sm"><i class="fa fa-edit"></i> Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;
                                     <a href="slide.php?delete=<?php echo $slider_id;?>&image=<?php echo $slider_image;?>" onclick="return confirm('Are your sure?')" class="btn btn-danger btn-flat btn-sm"><i class="fa fa-trash-o"></i> Delete</a></td>
                             </tr>
                             <?php
+                            $n--;
                         }
                         ?>
                         </tbody>
                         <tfoot>
                         <tr>
-                            <th>ID</th>
+                            <th hidden>ID</th>
+                            <th>No</th>
                             <th>Title</th>
                             <th>Link</th>
                             <th>Image</th>

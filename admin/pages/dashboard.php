@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<title>Wellcome to control panel</title>
 <?php
 session_start();
 //error_reporting(0);
@@ -131,6 +132,7 @@ if($_SESSION['user_id'])
                                         <th style="width: 100px">Release date</th>
                                     </tr>
                                     <?php
+                                    $n = 1;
                                     $query="select * from movies WHERE status=1 ORDER BY movie_id DESC limit 5";
                                     $select_movie=mysqli_query($connection,$query);
                                     while($row = mysqli_fetch_assoc($select_movie)){
@@ -147,7 +149,6 @@ if($_SESSION['user_id'])
                                         $cate_name=$row['cate_name'];
 
                                     }
-                                        $n=1;
                                     ?>
                                     <tr>
                                         <td><?php echo $n;?></td>
@@ -157,7 +158,7 @@ if($_SESSION['user_id'])
                                         <td><?php echo $movie_date;?></td>
                                     </tr>
                                         <?php
-                                        $n+=1;
+                                        $n++;
                                     }
                                     ?>
                                 </table>
@@ -184,6 +185,7 @@ if($_SESSION['user_id'])
 
                                     </tr>
                                     <?php
+                                    $n1=1;
                                     $query="select * from slider ORDER BY slider_id DESC limit 5";
                                     $select_slider=mysqli_query($connection,$query);
                                     while($row = mysqli_fetch_assoc($select_slider)){
@@ -193,10 +195,11 @@ if($_SESSION['user_id'])
 
                                         ?>
                                         <tr>
-                                            <td><?php echo $slider_id; ?></td>
+                                            <td><?php echo $n1; ?></td>
                                             <td><?php echo $slider_title; ?></td>
                                         </tr>
                                         <?php
+                                        $n++;
                                     }
                                     ?>
 

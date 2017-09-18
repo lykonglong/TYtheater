@@ -93,7 +93,7 @@
       </li>
       <li>
         <a href="category.php">
-          <i class="fa fa-magic"></i> <span>Category</span>
+          <i class="fa fa-briefcase"></i> <span>Category</span>
         </a>
       </li>
 

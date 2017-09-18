@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<title>Categories Management</title>
 <?php
 session_start();
 require_once "../../includes/db.php";
@@ -79,7 +80,7 @@ if($_SESSION['user_role'])
     <script>
         $(function () {
             $("#example1").DataTable({
-                "order": [[ 0, "desc" ]]
+                "order": [[ 0, "DESC" ]]
 
             });
             $('#example2').DataTable({
