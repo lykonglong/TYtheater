@@ -55,9 +55,13 @@
                                         <div class="box-body">
                                             <div class="form-group">
                                                 <label for="cate_name" class="col-sm-3 control-label" data-toggle="" style="font-size: 16px;">Category Name</label>
-
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="cat_name" name="cate_name" placeholder="Category Name" required>
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-briefcase"></i>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="cate_name" name="cate_name" placeholder="Category Name" required>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -97,7 +101,8 @@
                     <table id="example1" class="table table-bordered table-hover">
                         <thead>
                         <tr>
-                            <th>Category ID</th>
+                            <th hidden>ID</th>
+                            <th>No</th>
                             <th>Category Name</th>
                             <th>Action</th>
                             
@@ -105,26 +110,30 @@
                         </thead>
                         <tbody>
                         <?php
-                        $query="select * from categories ORDER  BY cate_id DESC";
+                        $query="select * from categories";
                         $select_category=mysqli_query($connection,$query);
+                        $n = mysqli_num_rows($select_category);
                         while($row = mysqli_fetch_assoc($select_category)){
                             $cate_id= $row['cate_id'];
                             $cate_name= $row['cate_name'];
 
                             ?>
                             <tr>
-                                <td style="line-height: 30px;font-size:;"><?php echo $cate_id; ?></td>
+                                <td hidden><?php echo $cate_id; ?></td>
+                                <td style="line-height: 30px;font-size:;"><?php echo $n; ?></td>
                                 <td style="line-height: 30px;font-size:;"><?php echo $cate_name; ?></td>
 
                                 <td align="center" style="line-height: 30px;font-size:;" ><a href="category.php?action=edit_category&cate_id=<?php echo $cate_id; ?>" class="btn btn-success btn-flat btn-sm"><i class="fa fa-edit"></i> Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="category.php?delete=<?php echo $cate_id;?>" onclick="return confirm('Are your sure?')" class="btn btn-danger btn-flat btn-sm"><i class="fa fa-trash-o"></i> Delete</a></td>
                             </tr>
                             <?php
+                            $n--;
                         }
                         ?>
                         </tbody>
                         <tfoot>
                         <tr>
-                            <th>Category ID</th>
+                            <th hidden>ID</th>
+                            <th>No</th>
                             <th>Category Name</th>
                             <th>Action</th>
                         </tr>

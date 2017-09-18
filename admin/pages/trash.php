@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<title>Trash Movie Management</title>
 <?php
 session_start();
 error_reporting(0);

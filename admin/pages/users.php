@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<title>Users Management</title>
 <?php
 session_start();
 //error_reporting(0);
@@ -84,17 +85,8 @@ if($user_role=='Admin')
 <script src="../plugins/input-mask/jquery.inputmask.extensions.js"></script>
 <script>
     $(function () {
-        $("#example1").DataTable({
-            "order": [[ 0, "desc" ]]
-        });
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false
-
+        $("#example").DataTable({
+            "order": [[ 0, "DESC" ]]
         });
     });
 

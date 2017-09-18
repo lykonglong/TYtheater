@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<title>Profile Management</title>
 <?php
 session_start();
 require_once "../../includes/db.php";
