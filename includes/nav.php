@@ -119,3 +119,5 @@
     </header>
     <!--/HEADER-->
     <div id="content-ajax">
+        <!--MAIN-->
+        <main class="page__main main">

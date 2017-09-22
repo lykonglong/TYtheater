@@ -1,5 +1,4 @@
-<!--MAIN-->
-<main class="page__main main">
+
     <div class="tp-banner-container clearfix">
         <div class="slider">
             <div class="tp-banner-container clearfix">
@@ -152,3 +151,4 @@
             </div>
         </div>
     </div>
+
