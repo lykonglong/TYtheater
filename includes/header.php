@@ -1,5 +1,7 @@
 <?php include "includes/db.php";?>
 <?php include  "_config_inc.php" ?>
+<?php require ('includes/paginator.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +20,6 @@
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
     <link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
-
 
 
 
