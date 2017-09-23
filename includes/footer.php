@@ -44,7 +44,8 @@
 
 
 <!-- jquery js -->
-
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider.js"></script>
 
 <!-- owl.carousel.min js -->
 <script type="text/javascript" src="js/owl.carousel.min.js"></script>

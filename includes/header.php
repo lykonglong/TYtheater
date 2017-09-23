@@ -17,21 +17,15 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- owl.carousel CSS -->
+    <!-- jquery-ui.min CSS  -->
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
     <link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
+    <link rel="stylesheet" type="text/css" href="css/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="css/revolution-slider.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
 
-
-
-    <!-- flexslider CSS -->
-    <link rel="stylesheet" type="text/css" href="css/flexslider.css" >
-
-    <!-- jquery-ui.min CSS  -->
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-
-    <!-- Revolution Slider CSS -->
-    <link href="css/revolution-slider.css" rel="stylesheet">
-    <link href="css/jquery.bxslider.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css">
 
 
