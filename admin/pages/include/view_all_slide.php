@@ -36,7 +36,7 @@ if($user_id)
             $insert_slider ="INSERT INTO slider (slider_title, slider_image, slider_link)  VALUE ('$slider_title','$slider_image','$slider_link')";
             $create_slider=mysqli_query($connection,$insert_slider);
             if( $create_slider){
-                move_uploaded_file($slider_image_temp,"../dist/img/slider/".$slider_image);
+                move_uploaded_file($slider_image_temp,"../../movie/slider/".$slider_image);
                 echo "<script language=\"javascript\">window.location.href = \"slide.php\"</script>";
             }else
             {
@@ -156,7 +156,7 @@ if($user_id)
                                 <td style="line-height: 30px;font-size:;"><?php echo $slider_title;?></td>
                                 <td style="line-height: 30px;font-size:;"><?php echo $slider_link;?></td>
 
-                                <td align="center" style=""><img src="../dist/img/slider/<?php echo $slider_image;?>" class="img-responsive" alt="<?php echo $slider_image;?>" style="height: 30px;"></td>
+                                <td align="center" style=""><img src="<?php echo BASE_URL ?>/movie/slider/<?php echo $slider_image;?>" class="img-responsive" alt="<?php echo $slider_image;?>" style="height: 30px;"></td>
                                 <td align="center" style="line-height: 30px;font-size:;" >
                                     <a href="slide.php?action=edit_slide&slide_id=<?php echo $slider_id; ?>" class="btn btn-success btn-flat btn-sm"><i class="fa fa-edit"></i> Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;
                                     <a href="slide.php?delete=<?php echo $slider_id;?>&image=<?php echo $slider_image;?>" onclick="return confirm('Are your sure?')" class="btn btn-danger btn-flat btn-sm"><i class="fa fa-trash-o"></i> Delete</a></td>
@@ -186,7 +186,7 @@ if($user_id)
                         $delete_query=mysqli_query($connection,$query);
                         if($delete_query)
                         {
-                            unlink( '../dist/img/slider/'.$image);
+                            unlink( '../../movie/slider/'.$image);
                             echo "<script language=\"javascript\">window.location.href = \"slide.php\"</script>";
                         }
 
