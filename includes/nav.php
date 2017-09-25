@@ -75,29 +75,30 @@
                 <a href="#" class="search-close"></a>
             </div>
             <!-- search form -->
-            <form action="#" method="post" class="search">
+
+            <form action="search.php" method="get" class="search">
                 <input type="text" name="search" class="search__field" placeholder="Search ....." autocomplete="off">
-                <button class="search__button" type="submit"></button>
+                <button class="search__button" name="search" type="submit"></button>
                 <div class="search__enter">
                     Enter
                 </div>
-                <div class="search__quick-links">
-                    <h6>Quick Links</h6>
-                    <ul>
-                        <li>
-                            <a href="#">Unlocking The Bible Codes</a>
-                        </li>
-                        <li>
-                            <a href="#">Mel Gibson movies</a>
-                        </li>
-                        <li>
-                            <a href="#">The Emerald Buddha</a>
-                        </li>
-                        <li>
-                            <a href="#">A Brief History Of Creation</a>
-                        </li>
-                    </ul>
-                </div>
+<!--                <div class="search__quick-links">-->
+<!--                    <h6>Quick Links</h6>-->
+<!--                    <ul>-->
+<!--                        <li>-->
+<!--                            <a href="#">Unlocking The Bible Codes</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="#">Mel Gibson movies</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="#">The Emerald Buddha</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="#">A Brief History Of Creation</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
             </form>
             <!-- /search form -->
             <a href="#" class="menu-open">
