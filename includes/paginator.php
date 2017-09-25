@@ -102,7 +102,7 @@ class Paginator {
 //    <div class="pagination">
         $previous_page = ( $this->_page == 1 ) ?
             '<li><a href=""><button class="pagination__prev" disabled= $class"></button></a></li>' : //remove link from previous button
-            '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page - 1 ) . '"><button class="pagination__prev" disabled= $class"></button></a></li>';
+            '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page - 1 ) . '"><button class="pagination__prev" "></button></a></li>';
 //
 //        <ul class="pagination__pages">
 //            <li><a href="">
@@ -179,7 +179,7 @@ class Paginator {
         //$this->_page + 1 = next page (>>> link)
         $next_page = ( $this->_page == $last) ? 
         '<li ><a href=""><button class="pagination__next" disabled='. $class. '"></button></a></li>' : //remove link from next button
-        '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page + 1 ) . '"><button class="pagination__next" disabled='. $class. '"></button></a></li>';
+        '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page + 1 ) . '"><button class="pagination__next" "></button></a></li>';
 
         $html .= $next_page;
         $html .= '</ul></div></div>';
