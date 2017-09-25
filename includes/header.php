@@ -47,7 +47,7 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="all">
 
     <!--CSS CRITICAL-->
-   
+    
     <!--/CSS CRITICAL-->
 
     <!--CSS MAIN-->
