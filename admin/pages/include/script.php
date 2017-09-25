@@ -1,6 +1,7 @@
 
 <!-- jQuery 2.2.3 -->
 <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+
 <!-- Bootstrap 3.3.6 -->
 <script src="../../bootstrap/js/bootstrap.min.js"></script>
 <!-- DataTables -->
@@ -18,6 +19,9 @@
 <script src="../../plugins/input-mask/jquery.inputmask.js"></script>
 <script src="../../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="../../plugins/input-mask/jquery.inputmask.extensions.js"></script>
+
+<script src="/js/jquery-1.8.2.min.js"></script>
+<script src="/js/jquery.bxslider.min.js"></script>
 <script>
     $(function () {
         $("#example1").DataTable({
@@ -33,5 +37,7 @@
 
         });
     });
-
+    $(document).ready(function(){
+        $('.bxslider').bxSlider();
+    });
 </script>

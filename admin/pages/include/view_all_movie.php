@@ -142,7 +142,7 @@
                 </div>-->
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <table id="example1" class="table table-bordered table-hover">
+                    <table id="movie_ser" class="table table-bordered table-hover">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -153,60 +153,7 @@
                             <th>Action</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <?php
-                        $query="select * from movies WHERE status=1";
-                        $select_movie=mysqli_query($connection,$query);
-                        while($row = mysqli_fetch_assoc($select_movie)){
-                            $movie_id= $row['movie_id'];
-                            $user_id_db=$row['user_id'];
-                            $movie_cate_id= $row['movie_cate_id'];
-                            $movie_title= $row['movie_title'];
-                            $movie_image= $row['movie_image'];
-                            $movie_description= $row['movie_description'];
-                            $movie_date= $row['movie_date'];
-                            $movie_tags= $row['movie_tags'];
-                            $movie_trailer= $row['movie_trailer'];
-                            $movie_full= $row['movie_full'];
-                            $movie_resolution= $row['movie_resolution'];
-                            $status= $row['status'];
-                            $date_added= $row['date_added'];
-
-
-                            $cate_query="select * from categories where cate_id=$movie_cate_id";
-                            $select_category=mysqli_query($connection,$cate_query);
-                            while($row=mysqli_fetch_assoc($select_category)){
-                                $cate_name=$row['cate_name'];
-                            }
-                            ?>
-                            <tr>
-                                <td style="line-height: 30px;font-size:;"><?php echo $movie_id;?></td>
-                                <td style="line-height: 30px;font-size:;"><?php echo $movie_title;?></td>
-                                <td style="line-height: 30px;font-size:;"><?php echo $cate_name;?></td>
-                                <td style="line-height: 30px;font-size:;"><?php echo $movie_resolution;?></td>
-                                <!--<td style="line-height: 30px;font-size:;text-align: center;">
-                                    <?php
-/*                                    if($post_status=='Draft')
-                                    {
-                                        echo "<a href=\"posts.php?publish_id=$post_id \" onclick=\"return confirm('Do you want to publish this post?')\" class=\"btn btn-success btn-flat btn-sm\"><i class=\"fa fa-eye\"></i> Publish</a>";
-                                    }
-                                    elseif($post_status=='Publish')
-                                    {
-                                        echo "<a href=\"posts.php?draft_id=$post_id \" onclick=\"return confirm('Do you want to set this post to draft?')\" class=\"btn btn-danger btn-flat btn-sm\"><i class=\"fa fa-eye-slash\"></i> Draft</a>";
-                                    }
-                                    */?>
-
-                                </td>-->
-                                <td align="center"><img src="<?php echo BASE_URL; ?>/movie/cover/<?php echo $movie_image;?>" class="img-responsive" alt="<?php echo $movie_image;?>" style="height: 40px;"></td>
-                                <td align="center" style="line-height: 30px;font-size:;" >
-                                    <a href="movie.php?action=view_movie&view=<?php echo $movie_id; ?>" class="btn btn-info btn-flat btn-sm"><i class="fa fa-eye"></i> View</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="movie.php?action=edit_movie&edit=<?php echo $movie_id; ?>" class="btn btn-success btn-flat btn-sm"><i class="fa fa-edit"></i> Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="movie.php?trash=<?php echo $movie_id;?>" onclick="return confirm('Are your sure?')" class="btn btn-danger btn-flat btn-sm"><i class="fa fa-trash-o"></i> Trash</a></td>
-                            </tr>
-                            <?php
-                        }
-                        ?>
-                        </tbody>
+                        
                         <tfoot>
                         <tr>
                             <th>ID</th>
@@ -218,6 +165,26 @@
                         </tr>
                         </tfoot>
                     </table>
+					
+					<script type="text/javascript" language="javascript" >
+						$(document).ready(function() {
+							var dataTable = $('#movie_ser').DataTable( {
+								"processing": true,
+								"serverSide": true,
+								"ajax":{
+									url :"include/fetch_all_movies.php", // json datasource
+									type: "post",  // method  , by default get
+									error: function(){  // error handling
+										$(".employee-grid-error").html("");
+										$("#movie_ser").append('<tbody class="employee-grid-error"><tr><th colspan="3">No data found in the server</th></tr></tbody>');
+										$("#employee-grid_processing").css("display","none");
+
+									}
+								}
+							} );
+						} );
+					</script>
+					
                     <!--delete video from table video_post by id-->
                     <?php
                     if(isset($_GET['trash'])) {

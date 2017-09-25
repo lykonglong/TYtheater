@@ -187,7 +187,7 @@ if(isset($_POST['btnupdate'])){
                                     <div class="form-group">
                                         <label for="old_cover" class="col-sm-3 control-label" style="font-size: 16px;">Old Cover</label>
                                         <div class="col-sm-4 ">
-                                            <img width=150 src="<?php echo BASE_URL; ?>/movie/cover/<?php echo $movie_image; ?>"/>
+                                            <img width=250 src="<?php echo BASE_URL; ?>/movie/cover/<?php echo $movie_image; ?>"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -200,7 +200,7 @@ if(isset($_POST['btnupdate'])){
                                             <p class="help-block col-sm-offset-2" align="right"> <span style="color: red;font-size: 16px;" >Cover</span></p>
                                         </div>
                                         <div class="col-sm-4">
-                                            <img id="cover" alt="Preview" width="150" height="200" align="center" />
+                                            <img id="cover" alt="Preview" width="250" height="" align="center" />
                                         </div>
                                     </div>
                                 </div>

@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Customer</title>
+
 
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -14,6 +14,9 @@
   <!-- Ionicons -->
   <!-- DataTables -->
   <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<!--  <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">

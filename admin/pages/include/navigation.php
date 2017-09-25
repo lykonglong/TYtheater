@@ -78,7 +78,7 @@
         if($user_role=='Admin'){
       ?>
       <li>
-        <a href="../dashboard.html">
+        <a href="dashboard.php">
           <i class="fa fa-dashboard"></i> <span>Dashboard</span>
         <span class="pull-right-container">
           <!--<small class="label pull-right bg-red">3</small>-->
@@ -93,7 +93,7 @@
       </li>
       <li>
         <a href="category.php">
-          <i class="fa fa-magic"></i> <span>Category</span>
+          <i class="fa fa-briefcase"></i> <span>Category</span>
         </a>
       </li>
 
@@ -115,6 +115,15 @@
       <?php
       }elseif($user_role=='Subscriber'){
           ?>
+        <li>
+            <a href="dashboard.php">
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                <span class="pull-right-container">
+                    <!--<small class="label pull-right bg-red">3</small>-->
+                    <!--<small class="label pull-right bg-blue">17</small>-->
+                </span>
+            </a>
+        </li>
           <li>
             <a href="movie.php">
               <i class="fa fa-video-camera"></i> <span>Movie</span>

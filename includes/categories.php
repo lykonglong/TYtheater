@@ -5,8 +5,6 @@
 
             <div class="section__inner">
 
-
-            </div>
             <div class="row">
 
                 <div class="col-xxl-2 col-md-3 col-sm-4">

@@ -95,8 +95,11 @@ $user_role = $_SESSION['user_role'];
                                             <div class="form-group">
                                                 <label for="user_image" class="col-sm-3 control-label" style="font-size: 16px;">User Image</label>
                                                 <div class="col-sm-9">
-                                                    <input type="file" id="user_image" name="user_image" required>
+                                                    <input type="file" id="user_image" name="user_image" onchange="document.getElementById('s_image').src = window.URL.createObjectURL(this.files[0]);">
                                                     <p class="help-block col-sm-offset-2"> <span style="color: red;font-size: 14px;" >Please upload the square photo</span></p>
+                                                </div>
+                                                <div class="col-sm-4 col-sm-offset-4">
+                                                    <img id="s_image" alt="Preview" width="250" height="250"/>
                                                 </div>
                                             </div>
 
@@ -136,7 +139,8 @@ $user_role = $_SESSION['user_role'];
                     <table id="example1" class="table table-bordered table-hover">
                         <thead>
                         <tr>
-                            <th>ID</th>
+                            <td hidden>ID</td>
+                            <th>No</th>
                             <th>Username</th>
                             <th>Name</th>
                             <th>Role</th>
@@ -147,8 +151,11 @@ $user_role = $_SESSION['user_role'];
                         </thead>
                         <tbody>
                         <?php
+
                         $query="select * from users";
                         $select_user=mysqli_query($connection,$query);
+                        $n = mysqli_num_rows($select_user);
+                        //$n=1;
                         while($row = mysqli_fetch_assoc($select_user)){
                             $user_id= $row['user_id'];
                             $username= $row['username'];
@@ -159,21 +166,24 @@ $user_role = $_SESSION['user_role'];
                             $user_image= $row['user_image'];
                             ?>
                             <tr>
-                                <td style="line-height: 30px;font-size:;"><?php echo $user_id;?></td>
+                                <td hidden style="line-height: 30px;font-size:;"><?php echo $user_id;?></td>
+                                <td style="line-height: 30px;font-size:;"><?php echo $n;?></td>
                                 <td style="line-height: 30px;font-size:;"><?php echo $username;?></td>
                                 <td style="line-height: 30px;font-size:;"><?php echo $fullname;?></td>
                                 <td style="line-height: 30px;font-size:;"><?php echo $user_role;?></td>
                                 <td style="line-height: 30px;font-size:;"><?php echo $user_date;?></td>
-                                <td style=""><img src="../dist/img/users/<?php echo $user_image;?>" class="img-responsive" alt="User Image" style="height: 30px;"></td>
+                                <td align="center"><img src="../dist/img/users/<?php echo $user_image;?>" class="img-responsive" alt="User Image" style="height: 30px;"></td>
                                 <td align="center" style="line-height: 30px;font-size:;" ><a href="users.php?action=edit_user&user_id=<?php echo $user_id; ?>" class="btn btn-success btn-flat btn-sm"><i class="fa fa-edit"></i> Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="users.php?delete=<?php echo $user_id;?>" onclick="return confirm('Are your sure?')" class="btn btn-danger btn-flat btn-sm"><i class="fa fa-trash-o"></i> Delete</a></td>
                             </tr>
                             <?php
+                            $n--;
                         }
                         ?>
                         </tbody>
                         <tfoot>
                         <tr>
-                            <th>ID</th>
+                            <td hidden>ID</td>
+                            <th>No</th>
                             <th>Username</th>
                             <th>Name</th>
                             <th>Role</th>
