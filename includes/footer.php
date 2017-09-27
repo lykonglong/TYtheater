@@ -45,7 +45,7 @@
 
 <!-- jquery js -->
 
-
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <!-- owl.carousel.min js -->
 <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 
