@@ -177,15 +177,10 @@ class Paginator {
         $class = ( $this->_page == $last ) ? "disabled" : ""; //disable (>>> next page link)
 
         //$this->_page + 1 = next page (>>> link)
-<<<<<<< HEAD
-        $next_page = ( $this->_page == $last) ? 
-        '<li ><a href=""><button class="pagination__next" disabled='. $class. '"></button></a></li>' : //remove link from next button
-        '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page + 1 ) . '"><button class="pagination__next" "></button></a></li>';
-=======
+
         $next_page = ( $this->_page == $last) ?
             '<li ><a href=""><button class="pagination__next" disabled='. $class. '"></button></a></li>' : //remove link from next button
             '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page + 1 ) . '"><button class="pagination__next" "></button></a></li>';
->>>>>>> backuporigin
 
         $html .= $next_page;
         $html .= '</ul></div></div>';
