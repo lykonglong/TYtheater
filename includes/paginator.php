@@ -1,7 +1,7 @@
 <?php
- 
+
 class Paginator {
-    
+
     //declare all internal (private) variables, only accessbile within this class
     private $_conn;
     private $_limit; //records (rows) to show per page
@@ -9,50 +9,50 @@ class Paginator {
     private $_query;
     private $_total;
     private $_row_start;
-    
+
     //constructor method is called automatically when object is instantiated with new keyword
-    public function __construct( $conn, $query ) 
+    public function __construct( $conn, $query )
     {
-     
-    //$this-> variables become available anywhere within THIS class
-    $this->_conn = $conn; //mysql connection resource
-    $this->_query = $query; //mysql query string
- 
-    $rs = $this->_conn->query( $this->_query );
-    $this->_total = $rs->num_rows; //total number of rows
-     
+
+        //$this-> variables become available anywhere within THIS class
+        $this->_conn = $conn; //mysql connection resource
+        $this->_query = $query; //mysql query string
+
+        $rs = $this->_conn->query( $this->_query );
+        $this->_total = $rs->num_rows; //total number of rows
+
     }
-    
+
     //LIMIT DATA
     //all it does is limits the data returned and returns everything as $result object
     public function getData( $limit = 10, $page = 1 ) { //set default argument values
-     
+
         $this->_limit = $limit;
         $this->_page = $page;
 
         //no limiting necessary, use query as it is
         if ( $this->_limit == 'all' ) {
             $query = $this->_query;
-        } 
-        
+        }
+
         else {
             //echo ( ( $this->_page - 1 ) * $this->_limit );die;
             //create the query, limiting records from page, to limit
             $this->_row_start = ( ( $this->_page - 1 ) * $this->_limit );
             $query = $this->_query .
-                    //add to original query: ( minus one because of the way SQL works )
-                    " LIMIT {$this->_row_start}, $this->_limit";
+                //add to original query: ( minus one because of the way SQL works )
+                " LIMIT {$this->_row_start}, $this->_limit";
         }
-        
+
         //echo $query;die;
-        
+
         $rs = $this->_conn->query( $query ) or die($this->_conn->error);
 
         while ( $row = $rs->fetch_assoc() ) {
             //store this array in $result->data below
-            $results[]  = $row; 
+            $results[]  = $row;
         }
-        
+
         //print_r($results);die;
 
         //return data as object, new stdClass() creates new empty object
@@ -65,7 +65,7 @@ class Paginator {
         //print_r($result);die;
         return $result; //object
     }
-    
+
     //PRINT LINKS
     public function createLinks( $links )
     {
@@ -76,13 +76,13 @@ class Paginator {
 
         //get the last page number
         $last = ceil( $this->_total / $this->_limit );
-        
+
         //calculate start of range for link printing
         $start = ( ( $this->_page - $links ) > 0 ) ? $this->_page - $links : 1;
-        
+
         //calculate end of range for link printing
         $end = ( ( $this->_page + $links ) < $last ) ? $this->_page + $links : $last;
-        
+
 //        //debugging
 //        echo '$total: '.$this->_total.' | '; //total rows
 //        echo '$row_start: '.$this->_row_start.' | '; //total rows
@@ -94,15 +94,15 @@ class Paginator {
 //        echo '$links: '.$links.' <br /> '; //links
 
 
-    $html = '<div class="page-controls">';
-    $html .='<div class="pagination">';
-    $html .='<ul class="pagination__pages">';
+        $html = '<div class="page-controls">';
+        $html .='<div class="pagination">';
+        $html .='<ul class="pagination__pages">';
 
         $class = ( $this->_page == 1 ) ? "disabled" : ""; //disable previous page link <<<
 //    <div class="pagination">
         $previous_page = ( $this->_page == 1 ) ?
             '<li><a href=""><button class="pagination__prev" disabled= $class"></button></a></li>' : //remove link from previous button
-            '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page - 1 ) . '"><button class="pagination__prev" disabled= $class"></button></a></li>';
+            '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page - 1 ) . '"><button class="pagination__prev" "></button></a></li>';
 //
 //        <ul class="pagination__pages">
 //            <li><a href="">
@@ -139,7 +139,7 @@ class Paginator {
 
         //ul boot strap class - "pagination pagination-sm"
 
-        
+
         //create the links and pass limit and page as $_GET parameters
 
         //$this->_page - 1 = previous page (<<< link )
@@ -175,15 +175,15 @@ class Paginator {
         }
 
         $class = ( $this->_page == $last ) ? "disabled" : ""; //disable (>>> next page link)
-        
+
         //$this->_page + 1 = next page (>>> link)
-        $next_page = ( $this->_page == $last) ? 
-        '<li ><a href=""><button class="pagination__next" disabled='. $class. '"></button></a></li>' : //remove link from next button
-        '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page + 1 ) . '"><button class="pagination__next" disabled='. $class. '"></button></a></li>';
+        $next_page = ( $this->_page == $last) ?
+            '<li ><a href=""><button class="pagination__next" disabled='. $class. '"></button></a></li>' : //remove link from next button
+            '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page + 1 ) . '"><button class="pagination__next" "></button></a></li>';
 
         $html .= $next_page;
         $html .= '</ul></div></div>';
-        
+
         return $html;
     }
 }
