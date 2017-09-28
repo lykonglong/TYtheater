@@ -32,7 +32,7 @@
 
                                 <li>
 
-                                    <a href="category.php?category=<?php echo $cate_id;?>" class="is-active">
+                                    <a href="category.php?category=<?php echo $cate_id; ?>" class="is-active">
                                         <span><?php echo $cate_name; ?></span>
                                         <span class="categories-menu__badge"><?php categories_C($cate_id);  ?></span>
                                     </a>

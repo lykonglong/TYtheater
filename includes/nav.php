@@ -7,19 +7,20 @@
     <header class="page__header header">
         <div class="container">
             <div class="header__left">
-                <a href="<?php echo BASE_URL; ?>" class="logo js-ajax-link">
-                    <img src="images/logo.png" alt="" width="95px" height="70px">
+
+                <a href="<?php echo BASE_URL;?>/" class="logo js-ajax-link">
+                    <img src="images/logo1.svg" alt="" width="95px" height="70px">
                 </a>
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item header__nav-item--dropdown">
-                            <a href="<?php echo BASE_URL; ?>" class="header__nav-link js-ajax-link mobile-ajax-off">
+                            <a href="<?php echo BASE_URL;?>/" class="header__nav-link js-ajax-link mobile-ajax-off">
                                 Home
                             </a>
 
                         </li>
                         <li class="header__nav-item header__nav-item--dropdown">
-                            <a href="categories.html" class="header__nav-link js-ajax-link mobile-ajax-off">
+                            <a href="#" class="header__nav-link js-ajax-link mobile-ajax-off">
                                 Categories
                             </a>
                             <div class="header__nav-dropdown header__nav-dropdown--categories">
@@ -36,7 +37,7 @@
                                     ?>
 
                                     <li>
-                                        <a href="categories.html" class="js-ajax-link">
+                                        <a href="category.php?category=<?php echo $cate_id;?>" class="js-ajax-link">
                                             <?php echo $cate_name; ?>
                                         </a>
                                     </li>
@@ -53,7 +54,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="header__nav-item header__nav-item--dropdown">
+                        <!--<li class="header__nav-item header__nav-item--dropdown">
                             <a href="categories.html" class="header__nav-link js-ajax-link mobile-ajax-off">
                                 About Us
                             </a>
@@ -64,7 +65,7 @@
                                 Contact Us
                             </a>
 
-                        </li>
+                        </li>-->
 
                     </ul>
                 </nav>
