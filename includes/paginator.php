@@ -156,7 +156,7 @@ class Paginator {
 //    <div class="pagination">
         $previous_page = ( $this->_page == 1 ) ?
             '<li><a href=""><button class="pagination__prev" disabled= $class"></button></a></li>' : //remove link from previous button
-            '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page - 1 ) . '"><button class="pagination__prev" "></button></a></li>';
+            '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page - 1 ) . '&search='.$search .'"><button class="pagination__prev" "></button></a></li>';
 //
 //
 
