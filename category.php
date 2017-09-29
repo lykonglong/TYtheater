@@ -35,9 +35,9 @@
             ?>
             <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
 
-                <a href="trailer.php?movie=<?php echo $movie['movie_id']; ?>" class="video-preview video-preview--sm js-ajax-link">
+                <a href="<?php echo BASE_URL;?>/trailer.php?movie=<?php echo $movie['movie_id']; ?>" class="video-preview video-preview--sm js-ajax-link">
                     <div class="video-preview__image">
-                        <span class="lazy-bg-img" data-original="/movie/cover/<?php echo $movie['movie_image']; ?>"></span>
+                        <span class="lazy-bg-img" data-original="<?php echo BASE_URL;?>/movie/cover/<?php echo $movie['movie_image']; ?>"></span>
 
                         <div class="video-preview__info">
 

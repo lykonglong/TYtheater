@@ -42,7 +42,7 @@
 
     }
 ?>
-    <main class="page__main main">
+    <main class="page__main main" style="padding-top:0px;">
         <!--VIDEO-->
         <div class="inner">
                 <div class="container">
@@ -79,7 +79,7 @@
                                         <div class="video-specs__right">
                                             <p class="video-spec">
                                                 <span>Resolution: </span>
-                                                <a href="actor-profile.html" class="js-ajax-link"><?php echo $movie_resolution; ?></a href="actor-profile.html">
+                                                <a href="#" class="js-ajax-link"><?php echo $movie_resolution; ?></a href="actor-profile.html">
                                             </p>
                                             <p class="video-spec video-spec--category">
                                                 <span>Category:</span>
