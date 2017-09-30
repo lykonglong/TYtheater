@@ -60,7 +60,7 @@ include_once 'pages/include/function.php';
                           $_SESSION['username'] = $dbusername;
                           $_SESSION['user_role'] = $dbuser_role;
                           //header('location:pages/movie.php');
-                          echo "<script language=\"javascript\">window.location.href = \"pages/movie.php\"</script>";
+                          echo "<script language=\"javascript\">window.location.href = \"pages/dashboard.php\"</script>";
                       }
                       else{
                           //echo "<p class=\"login-box-msg text-red\">Password you entered is incorrect!</p>";

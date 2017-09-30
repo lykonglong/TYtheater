@@ -30,7 +30,7 @@
 
             <a href="trailer.php?movie=<?php echo $movie['movie_id']; ?>" class="video-preview video-preview--sm js-ajax-link">
                 <div class="video-preview__image">
-                    <span class="lazy-bg-img" data-original="/movie/cover/<?php echo $movie['movie_image']; ?>"></span>
+                    <span class="lazy-bg-img" data-original="<?php echo BASE_URL; ?>/movie/cover/<?php echo $movie['movie_image']; ?>"></span>
 
                     <div class="video-preview__info">
 

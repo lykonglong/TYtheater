@@ -2,3 +2,5 @@
 movie
 .idea
 /.idea
+*.xml
+.idea/dataSources.local.xml

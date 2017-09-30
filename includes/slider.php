@@ -1,64 +1,67 @@
 
+<style>
+    .stroke_text {
+        color: yellow;
+        text-shadow:
+                -2px -2px 0 #000,
+                2px -2px 0 #000,
+                -2px 2px 0 #000,
+                2px 2px 0 #000;
+    }
+</style>
+
     <div class="tp-banner-container clearfix">
-        <div class="slider">
-            <div class="tp-banner-container clearfix">
-                <div class="tp-banner" >
-                    <ul>
-                        <?php
-                        $query = "SELECT * FROM slider";
-                        $select_all_slider_query = mysqli_query($connection,$query);
-                        //$num_row = mysqli_num_rows($select_all_slider_query);
-                        while ($row=mysqli_fetch_assoc($select_all_slider_query)){
-                        $slider_id = $row['slider_id'];
-                        $slider_title = $row['slider_title'];
-                        $slider_image = $row['slider_image'];
-                        $slider_link = $row['slider_link'];
-                        ?>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
 
-                        <li data-transition="slidehorizontal" data-slotamount="5" data-masterspeed="700" >
-                            <!-- MAIN IMAGE -->
-                            <img src="admin/dist/img/slider/<?php echo $slider_image ?>" alt="slidebg3" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 1 -->
-                            <div class="tp-caption white_heavy_60 customin ltl tp-resizeme"
-                                 data-x="310"
-                                 data-y="140"
-                                 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                 data-speed="1200"
-                                 data-start="700"
-                                 data-easing="Power4.easeOut"
-                                 data-splitin="chars"
-                                 data-splitout="none"
-                                 data-elementdelay="0.1"
-                                 data-endelementdelay="0.1"
-                                 data-endspeed="1000"
-                                 data-endeasing="Power4.easeIn"
-                                 style=" font-size:70px; font-weight:800; color: ;"><?php echo $slider_title ?> </div>
-
-                            <!-- LAYER NR. 2 -->
-
-
-                            <!-- LAYER NR. 4 -->
-                            <div class="tp-caption lfb ltb start tp-resizeme"
-                                 data-x="310"
-                                 data-y="270"
-                                 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                 data-speed="1500"
-                                 data-start="1600"
-                                 data-easing="Power3.easeInOut"
-                                 data-splitin="none"
-                                 data-splitout="none"
-                                 data-elementdelay="0.01"
-                                 data-endelementdelay="0.1"
-                                 data-linktoslide="next"
-                                 style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='largebtn solid'><?php echo $slider_link ?></a> </div>
-                        </li>
-                        <?php } ?>
-
-
-                    </ul>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <?php
+                    echo getSlideActive();
+                    echo getSlide();
+                ?>
+                <!--<div class="item active">
+                    <img src="images/slider/kong-skull-island.jpg" alt="Los Angeles" style="width:100%;">
+                    <div class="carousel-caption">
+                        <h1 class="stroke_text">The movie title here</h1>
+                        <a class="btn btn-danger" href="#">Watch Now</a>
+                    </div>
                 </div>
+
+                <div class="item">
+                    <img src="images/slider/movieall.jpg" alt="Chicago" style="width:100%;">
+                    <div class="carousel-caption">
+                        <h1 class="stroke_text">The movie title here</h1>
+                        <a class="label btn-danger" href="#">Watch Now</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="images/slider/The-Great-Gatsby.jpg" alt="New york" style="width:100%;">
+                    <div class="carousel-caption">
+                        <h1 class="stroke_text">The movie title here</h1>
+                        <a class="btn btn-danger" href="#">Watch Now</a>
+                    </div>
+                </div>-->
+
             </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
 

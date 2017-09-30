@@ -2,6 +2,7 @@
 <?php include  "_config_inc.php" ?>
 <?php require ('includes/paginator.php'); ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +48,15 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="all">
 
     <!--CSS CRITICAL-->
-    
+    <style>
+        html {
+            background: #000;
+        }
+
+        body {
+            background: #000;
+        }
+    </style>
     <!--/CSS CRITICAL-->
 
     <!--CSS MAIN-->
