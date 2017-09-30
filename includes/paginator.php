@@ -83,19 +83,7 @@ class Paginator {
         //calculate end of range for link printing
         $end = ( ( $this->_page + $links ) < $last ) ? $this->_page + $links : $last;
 
-<<<<<<< HEAD
-//        //debugging
-//        echo '$total: '.$this->_total.' | '; //total rows
-//        echo '$row_start: '.$this->_row_start.' | '; //total rows
-//        echo '$limit: '.$this->_limit.' | '; //total rows per query
-//        echo '$start: '.$start.' | '; //start printing links from
-//        echo '$end: '.$end.' | '; //end printing links at
-//        echo '$last: '.$last.' | '; //last page
-//        echo '$page: '.$this->_page.' | '; //current page
-//        echo '$links: '.$links.' <br /> '; //links
-=======
 
->>>>>>> master
 
 
         $html = '<div class="page-controls">';
@@ -108,49 +96,7 @@ class Paginator {
             '<li><a href=""><button class="pagination__prev" disabled= $class"></button></a></li>' : //remove link from previous button
             '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page - 1 ) . '"><button class="pagination__prev" "></button></a></li>';
 //
-<<<<<<< HEAD
-//        <ul class="pagination__pages">
-//            <li><a href="">
-//                <button class="pagination__prev" disabled="disabled"></button></a>
-//            </li>
-//            <li class="is-active"><a href="#">1</a>
-//            </li>
-//            <li><a href="#">2</a>
-//            </li>
-//            <li><a href="#">3</a>
-//            </li>
-//            <li><a href="#">4</a>
-//            </li>
-//            <li><a href="#">5</a>
-//            </li>
-//            <li><a href="#">6</a>
-//            </li>
-//            <li><a href="#">7</a>
-//            </li>
-//            <li><a href="#">8</a>
-//            </li>
-//            <li><a href="#">9</a>
-//            </li>
-//            <li><span>...</span>
-//            </li>
-//            <li><a href="#">336</a>
-//            </li>
-//            <li>
-//                <button class="pagination__next"></button>
-//            </li>
-//        </ul>
-//    </div>
-//</div>
-
-        //ul boot strap class - "pagination pagination-sm"
-
-
-        //create the links and pass limit and page as $_GET parameters
-
-        //$this->_page - 1 = previous page (<<< link )
-=======
 //
->>>>>>> master
 
 
         $html .= $previous_page;
@@ -174,10 +120,6 @@ class Paginator {
         $class = ( $this->_page == $last ) ? "disabled" : ""; //disable (>>> next page link)
 
         //$this->_page + 1 = next page (>>> link)
-<<<<<<< HEAD
-
-=======
->>>>>>> master
         $next_page = ( $this->_page == $last) ?
             '<li ><a href=""><button class="pagination__next" disabled='. $class. '"></button></a></li>' : //remove link from next button
             '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page + 1 ) . '"><button class="pagination__next" "></button></a></li>';
@@ -185,8 +127,6 @@ class Paginator {
         $html .= $next_page;
         $html .= '</ul></div></div>';
 
-<<<<<<< HEAD
-=======
         return $html;
     }
     public function searchLinks( $links, $search )
@@ -249,7 +189,6 @@ class Paginator {
         $html .= $next_page;
         $html .= '</ul></div></div>';
 
->>>>>>> master
         return $html;
     }
 }
