@@ -83,6 +83,7 @@ class Paginator {
         //calculate end of range for link printing
         $end = ( ( $this->_page + $links ) < $last ) ? $this->_page + $links : $last;
 
+<<<<<<< HEAD
 //        //debugging
 //        echo '$total: '.$this->_total.' | '; //total rows
 //        echo '$row_start: '.$this->_row_start.' | '; //total rows
@@ -92,6 +93,9 @@ class Paginator {
 //        echo '$last: '.$last.' | '; //last page
 //        echo '$page: '.$this->_page.' | '; //current page
 //        echo '$links: '.$links.' <br /> '; //links
+=======
+
+>>>>>>> master
 
 
         $html = '<div class="page-controls">';
@@ -104,6 +108,7 @@ class Paginator {
             '<li><a href=""><button class="pagination__prev" disabled= $class"></button></a></li>' : //remove link from previous button
             '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page - 1 ) . '"><button class="pagination__prev" "></button></a></li>';
 //
+<<<<<<< HEAD
 //        <ul class="pagination__pages">
 //            <li><a href="">
 //                <button class="pagination__prev" disabled="disabled"></button></a>
@@ -143,21 +148,13 @@ class Paginator {
         //create the links and pass limit and page as $_GET parameters
 
         //$this->_page - 1 = previous page (<<< link )
+=======
+//
+>>>>>>> master
 
 
         $html .= $previous_page;
-//            </li>
-//            <li class="is-active"><a href="#">1</a>
 
-//            <li><a href="#">9</a>
-//            </li>
-//            <li><span>...</span>
-//            </li>
-//            <li><a href="#">336</a>
-//            </li>
-//            <li>
-//                <button class="pagination__next" disabled= disabled"></button>
-//            </li>
         if ( $start > 1 ) { //print ... before (previous <<< link)
             $html .= '<li><a href="?limit=' . $this->_limit . '&page=1">1</a></li>'; //print first page link
             $html .= '<li><span>...</span></li>'; //print 3 dots if not on first page
@@ -177,7 +174,10 @@ class Paginator {
         $class = ( $this->_page == $last ) ? "disabled" : ""; //disable (>>> next page link)
 
         //$this->_page + 1 = next page (>>> link)
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
         $next_page = ( $this->_page == $last) ?
             '<li ><a href=""><button class="pagination__next" disabled='. $class. '"></button></a></li>' : //remove link from next button
             '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page + 1 ) . '"><button class="pagination__next" "></button></a></li>';
@@ -185,6 +185,71 @@ class Paginator {
         $html .= $next_page;
         $html .= '</ul></div></div>';
 
+<<<<<<< HEAD
+=======
+        return $html;
+    }
+    public function searchLinks( $links, $search )
+    {
+        //return empty result string, no links necessary
+        if ( $this->_limit == 'all' ) {
+            return '';
+        }
+
+        //get the last page number
+        $last = ceil( $this->_total / $this->_limit );
+
+        //calculate start of range for link printing
+        $start = ( ( $this->_page - $links ) > 0 ) ? $this->_page - $links : 1;
+
+        //calculate end of range for link printing
+        $end = ( ( $this->_page + $links ) < $last ) ? $this->_page + $links : $last;
+
+
+
+
+        $html = '<div class="page-controls">';
+        $html .='<div class="pagination">';
+        $html .='<ul class="pagination__pages">';
+
+        $class = ( $this->_page == 1 ) ? "disabled" : ""; //disable previous page link <<<
+//    <div class="pagination">
+        $previous_page = ( $this->_page == 1 ) ?
+            '<li><a href=""><button class="pagination__prev" disabled= $class"></button></a></li>' : //remove link from previous button
+            '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page - 1 ) . '&search='.$search .'"><button class="pagination__prev" "></button></a></li>';
+//
+//
+
+
+        $html .= $previous_page;
+
+        if ( $start > 1 ) { //print ... before (previous <<< link)
+            $html .= '<li><a href="?limit=' . $this->_limit . '&page=1&search='.$search .'">1</a></li>'; //print first page link
+            $html .= '<li><span>...</span></li>'; //print 3 dots if not on first page
+        }
+
+        //print all the numbered page links
+        for ( $i = $start ; $i <= $end; $i++ ) {
+            $class = ( $this->_page == $i ) ? "is-active" : ""; //highlight current page
+            $html .= '<li class="' . $class . '"><a href="?limit=' . $this->_limit . '&page=' . $i . '&search='.$search .'">' . $i . '</a></li>';
+        }
+
+        if ( $end < $last ) { //print ... before next page (>>> link)
+            $html .= '<li><span>...</span></li>'; //print 3 dots if not on last page
+            $html .= '<li><a href="?limit=' . $this->_limit . '&page=' . $last . '&search='.$search .'">' . $last . '</a></li>'; //print last page link
+        }
+
+        $class = ( $this->_page == $last ) ? "disabled" : ""; //disable (>>> next page link)
+
+        //$this->_page + 1 = next page (>>> link)
+        $next_page = ( $this->_page == $last) ?
+            '<li ><a href=""><button class="pagination__next" disabled='. $class. '"></button></a></li>' : //remove link from next button
+            '<li ><a href="?limit=' . $this->_limit . '&page=' . ( $this->_page + 1 ) . '&search='.$search .'"><button class="pagination__next" "></button></a></li>';
+
+        $html .= $next_page;
+        $html .= '</ul></div></div>';
+
+>>>>>>> master
         return $html;
     }
 }

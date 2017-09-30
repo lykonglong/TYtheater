@@ -7,7 +7,10 @@
     <header class="page__header header">
         <div class="container">
             <div class="header__left">
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
                 <a href="<?php echo BASE_URL;?>/" class="logo js-ajax-link">
                     <img src="images/logo1.svg" alt="" width="95px" height="70px">
                 </a>
@@ -76,30 +79,12 @@
                 <a href="#" class="search-close"></a>
             </div>
             <!-- search form -->
-
             <form action="search.php" method="get" class="search">
-                <input type="text" name="search" class="search__field" placeholder="Search ....." autocomplete="off">
-                <button class="search__button" name="search" type="submit"></button>
+                <input type="text" name="search" class="search__field" placeholder="Search..." autocomplete="off">
+                <button class="search__button" type="submit"></button>
                 <div class="search__enter">
                     Enter
                 </div>
-<!--                <div class="search__quick-links">-->
-<!--                    <h6>Quick Links</h6>-->
-<!--                    <ul>-->
-<!--                        <li>-->
-<!--                            <a href="#">Unlocking The Bible Codes</a>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="#">Mel Gibson movies</a>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="#">The Emerald Buddha</a>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="#">A Brief History Of Creation</a>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
             </form>
             <!-- /search form -->
             <a href="#" class="menu-open">
