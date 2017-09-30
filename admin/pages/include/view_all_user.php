@@ -33,11 +33,11 @@ $user_role = $_SESSION['user_role'];
 
             $user_image=$_FILES['user_image']['name'];
             $user_image_temp=$_FILES['user_image']['tmp_name'];
-            move_uploaded_file($user_image_temp,"../dist/img/users/".$user_image);
 
             $insert_user ="Insert into users(username,password,fullname,user_image,user_role,date_added) VALUES ('$username','$encrypted','$name','$user_image','$user_role',now())";
             $create_user=mysqli_query($connection,$insert_user);
             if($create_user){
+                move_uploaded_file($user_image_temp,"../dist/img/users/".$user_image);
                 echo "<script language=\"javascript\">window.location.href = \"users.php\"</script>";
             }else
             {

@@ -22,7 +22,7 @@
         if($new_slider_image==""){
             $new_slider_image = $slider_image;
         }else{
-            unlink( '../dist/img/slider/'.$slider_image);
+            unlink( '../../images/slider/'.$slider_image);
         }
         $new_slider_link=mysqli_real_escape_string($connection,$_POST['slider_link']);
 
@@ -30,7 +30,7 @@
         $update_slider=mysqli_query($connection,$update_query);
         if($update_slider){
             //header('location:movie.php');
-            move_uploaded_file($new_slider_image_temp,"../dist/img/slider/".$new_slider_image);
+            move_uploaded_file($new_slider_image_temp,"../../images/slider/".$new_slider_image);
             echo "<script language=\"javascript\">window.location.href = \"slide.php\"</script>";
         }else{
             echo "failed";
@@ -67,7 +67,7 @@
                                     <div class="form-group">
                                         <label for="slider_old_image" class="col-sm-3 control-label" style="font-size: 16px;">Old Image</label>
                                         <div class="col-sm-8">
-                                            <img width=150 src="../dist/img/slider/<?php echo $slider_image; ?>"/>
+                                            <img width=150 src="<?php echo BASE_URL; ?>/images/slider/<?php echo $slider_image; ?>"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -77,8 +77,8 @@
                                             <p class="help-block col-sm-offset-2"> <span style="color: red;font-size: 14px;" ></span></p>
                                         </div>
                                         <label for="" class="col-sm-3 control-label" style="font-size: 16px;"></label>
-                                        <div class="col-sm-8">
-                                            <img id="s_image" alt="Preview" width="150" height="200"/>
+                                        <div class="col-sm-12">
+                                            <img id="s_image" alt="Preview" width="460" height="200"/>
                                         </div>
                                     </div>
 

@@ -20,16 +20,19 @@ if(isset($_POST['btnupdate'])){
 
     $new_user_image=$_FILES['user_image']['name'];
     $new_user_image_temp=$_FILES['user_image']['tmp_name'];
-    move_uploaded_file($new_user_image_temp,"../dist/img/users/".$new_user_image);
+
 
     if($new_user_image==""){
         $new_user_image = $user_image;
+    }else{
+        unlink( '../dist/img/users/'.$user_image);
     }
 
     $update_query="UPDATE users SET username='$new_username',fullname='$new_fullname',user_image='$new_user_image',user_role='$new_user_role' WHERE user_id=$the_user_id";
     $update_user=mysqli_query($connection,$update_query);
     if($update_user){
 //        header('location:users.php');
+        move_uploaded_file($new_user_image_temp,"../dist/img/users/".$new_user_image);
         echo "<script language=\"javascript\">window.location.href = \"users.php\"</script>";
     }else{
         echo "failed";
@@ -86,8 +89,11 @@ if(isset($_POST['btnupdate'])){
                                 <div class="form-group">
                                     <label for="user_image" class="col-sm-3 control-label" style="font-size: 16px;">User Image</label>
                                     <div class="col-sm-9">
-                                        <input type="file" id="user_image" name="user_image">
+                                        <input type="file" id="user_image" name="user_image" onchange="document.getElementById('s_image').src = window.URL.createObjectURL(this.files[0]);">
                                         <p class="help-block col-sm-offset-2"> <span style="color: red;font-size: 14px;" >Please upload the square photo</span></p>
+                                    </div>
+                                    <div class="col-sm-4 col-sm-offset-4">
+                                        <img id="s_image" alt="Preview" width="250" height="250"/>
                                     </div>
                                 </div>
 
