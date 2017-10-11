@@ -10,12 +10,12 @@
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../dist/font-awesome-4.7.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <!-- DataTables -->
   <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
 
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="../dist/js/jquery-1.11.3.min.js"></script>
 <!--  <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
@@ -26,7 +26,7 @@
   <!-- Bootstrap Color Picker -->
   <link rel="stylesheet" href="../plugins/colorpicker/bootstrap-colorpicker.min.css">
   <!--mask-->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"> </script>
+  <script src="../dist/js/jquery.maskedinput.js"> </script>
   <script>
     $(document).ready(function($){
       $('#phoneNumber').mask("999 999 9999", {placeholder:"(xxx) xxx xxxx"});

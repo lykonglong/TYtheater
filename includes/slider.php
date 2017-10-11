@@ -1,7 +1,7 @@
 
 <style>
     .stroke_text {
-        color: yellow;
+        color: Orange;
         text-shadow:
                 -2px -2px 0 #000,
                 2px -2px 0 #000,
@@ -27,30 +27,6 @@
                     echo getSlideActive();
                     echo getSlide();
                 ?>
-                <!--<div class="item active">
-                    <img src="images/slider/kong-skull-island.jpg" alt="Los Angeles" style="width:100%;">
-                    <div class="carousel-caption">
-                        <h1 class="stroke_text">The movie title here</h1>
-                        <a class="btn btn-danger" href="#">Watch Now</a>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="images/slider/movieall.jpg" alt="Chicago" style="width:100%;">
-                    <div class="carousel-caption">
-                        <h1 class="stroke_text">The movie title here</h1>
-                        <a class="label btn-danger" href="#">Watch Now</a>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="images/slider/The-Great-Gatsby.jpg" alt="New york" style="width:100%;">
-                    <div class="carousel-caption">
-                        <h1 class="stroke_text">The movie title here</h1>
-                        <a class="btn btn-danger" href="#">Watch Now</a>
-                    </div>
-                </div>-->
-
             </div>
 
             <!-- Left and right controls -->
