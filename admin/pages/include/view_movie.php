@@ -126,15 +126,15 @@ if(isset($_GET['view'])){
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <h2 align="center">Watch Trailer of <?php echo $movie_title; ?> below</h2>
+                                    <h2 align="center">Watch Trailer of <?php echo $movie_title; ?> </h2>
                                     <video width="100%" height="600" controls>
                                         <source src="<?php echo BASE_URL; ?>/movie/trailer/<?php echo $movie_trailer; ?>" type="video/mp4"  >
                                     </video>
                                 </div>
                                 <div class="form-group">
-                                    <h2 align="center">Watch Full of <?php echo $movie_title; ?> below</h2>
+                                    <h2 align="center">Watch Full of <?php echo $movie_title; ?> </h2>
                                     <video width="100%" height="600" controls>
-                                        <source src="<?php echo BASE_URL; ?>/movie/trailer/<?php echo $movie_trailer; ?>" type="video/mp4"  >
+                                        <source src="<?php echo BASE_URL; ?>/movie/full/<?php echo $movie_full; ?>" type="video/mp4"  >
                                     </video>
                                 </div>
                             </div>

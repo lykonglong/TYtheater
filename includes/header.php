@@ -24,6 +24,8 @@
 
 
 
+
+
     <!-- flexslider CSS -->
     <link rel="stylesheet" type="text/css" href="css/flexslider.css" >
 
@@ -34,6 +36,8 @@
     <link href="css/revolution-slider.css" rel="stylesheet">
     <link href="css/jquery.bxslider.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
 
 
@@ -46,6 +50,7 @@
     <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#ff0000">
 
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="all">
+
 
     <!--CSS CRITICAL-->
     <style>
