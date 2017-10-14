@@ -3,7 +3,7 @@
 <title>Movies Management</title>
 <?php
 session_start();
-//error_reporting(0);
+error_reporting(0);
 require_once "../../includes/db.php";
 include 'include/function.php';
 include '../../_config_inc.php';

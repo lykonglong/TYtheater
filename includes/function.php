@@ -1,7 +1,7 @@
 <?php
     function categories_C($count){
        global $connection;
-       $query = "SELECT COUNT(movie_cate_id) as CatCount FROM movies WHERE status = 1 AND movie_cate_id =$count";
+       $query = "SELECT COUNT(movie_cate_id) as CatCount FROM movies WHERE status=1 AND movie_cate_id =$count";
        $query_count = mysqli_query($connection,$query);
         while($row=mysqli_fetch_assoc($query_count)) {
             $CateCount=$row['CatCount'];
@@ -19,6 +19,7 @@
                 <img src="<?php echo BASE_URL; ?>/images/slider/<?php echo $row_slide['slider_image'];?>" alt="<?php echo $row_slide['slider_title'];?>" style="height:460px;width:100%;">
                 <div class="carousel-caption">
                     <h1 class="stroke_text"><?php echo $row_slide['slider_title'];?></h1>
+                    <a class="btn btn-danger" href="<?php echo $row_slide['slider_link'];?>">Watch Now</a>
                 </div>
             </div>
             <?php
@@ -34,6 +35,7 @@ function getSlide(){
             <img src="<?php echo BASE_URL; ?>/images/slider/<?php echo $row_slide['slider_image'];?>" alt="<?php echo $row_slide['slider_title'];?>" style="height:460px;width:100%;">
             <div class="carousel-caption">
                 <h1 class="stroke_text"><?php echo $row_slide['slider_title'];?></h1>
+                <a class="btn btn-danger" href="<?php echo $row_slide['slider_link'];?>">Watch Now</a>
             </div>
         </div>
         <?php

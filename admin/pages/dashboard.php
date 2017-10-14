@@ -199,7 +199,7 @@ if($_SESSION['user_id'])
                                             <td><?php echo $slider_title; ?></td>
                                         </tr>
                                         <?php
-                                        $n++;
+                                        $n1++;
                                     }
                                     ?>
 

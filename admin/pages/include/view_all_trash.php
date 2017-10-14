@@ -125,6 +125,10 @@
                         $delete ="DELETE FROM movies WHERE movie_id=$delete_id";
                         $run_delete=mysqli_query($connection,$delete);
                         if($run_delete){
+
+                            unlink( "../../movie/trailer/$movie_trailer");
+                            unlink( "../../movie/full/$movie_full");
+                            unlink( "../../movie/cover/$movie_image");
                             echo "<script language=\"javascript\">window.location.href = \"trash.php\"</script>";
                         }
                     }
